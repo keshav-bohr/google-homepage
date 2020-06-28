@@ -1,0 +1,22 @@
+.navbar {
+    top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+}
+
+.navbar-item-container {
+    flex: 0 1 auto;
+    display: flex;
+    padding-right: 15px;
+}
+
+.navbar-item:not(:first-child) {
+    padding-left: 10px;
+}
+
+.navbar-item a {
+    text-decoration: none;
+}
