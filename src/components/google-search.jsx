@@ -4,7 +4,7 @@ import googleLogo from '../assets/google-logo.png'
 function googleSearch(props) {
     return (
         <div>
-            <img src={googleLogo} />
+            <img src={googleLogo} alt="google-logo"/>
         </div>
     )
 }
