@@ -32,46 +32,69 @@ function navbar(props) {
     )
 }
 
+const otherGoogleAppsInfo = [
+    {
+        icon: '',
+        appName: 'Account'
+    },
+    {
+        icon: '',
+        appName: 'Search'
+    },
+    {
+        icon: '',
+        appName: 'Maps'
+    },
+    {
+        icon: '',
+        appName: 'Youtube'
+    },
+    {
+        icon: '',
+        appName: 'Play'
+    },
+    {
+        icon: '',
+        appName: 'News'
+    },
+    {
+        icon: '',
+        appName: 'Gmail'
+    },
+    {
+        icon: '',
+        appName: 'Meet'
+    },
+    {
+        icon: '',
+        appName: 'Chat'
+    },
+    {
+        icon: '',
+        appName: 'Contacts'
+    },
+    {
+        icon: '',
+        appName: 'Drive'
+    },
+    {
+        icon: '',
+        appName: 'Calendar'
+    }
+]
+
 function otherGoogleApps() {
     return (
         <div className='other-google-apps-wrapper'>
             <ul className='other-google-apps-list'>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
-                <li className='other-google-apps-list-icon'>
-
-                </li>
+                {otherGoogleAppsInfo.map((eachApp) => {
+                    return <li className='other-google-apps-list-icon'>
+                        <div className='other-google-app-info'>
+                            <Avatar className="other-google-app-avatar">K</Avatar>
+                            <span>{eachApp.appName}</span>
+                        </div>
+                    </li>
+                })}
             </ul>
         </div>
     )
