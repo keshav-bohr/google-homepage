@@ -80,6 +80,22 @@ const otherGoogleAppsInfo = [
     {
         icon: '',
         appName: 'Calendar'
+    },
+    {
+        icon: '',
+        appName: 'Translate'
+    },
+    {
+        icon: '',
+        appName: 'Photos'
+    },
+    {
+        icon: '',
+        appName: 'Duo'
+    },
+    {
+        icon: '',
+        appName: 'Shopping'
     }
 ]
 
