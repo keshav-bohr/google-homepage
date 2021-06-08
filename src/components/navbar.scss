@@ -26,6 +26,7 @@
 
 .navbar-item {
     padding: 0 0 0 15px;
+    cursor: pointer;
 }
 
 .navbar-item a {
@@ -48,6 +49,14 @@
     margin: 20px 18px 0 0;
     border-radius: 10px;
     box-shadow: 0 0 4px grey;
+    height: #{"calC(100vh - 200px)"}; // it gives error, if not used in strings
+    overflow: auto;
+}
+
+@media screen and (max-height: 500px) {
+    .other-google-apps-wrapper {
+        height: #{"calC(100vh - 80px)"}; // it gives error, if not used in strings
+    }
 }
 
 .other-google-apps-list {

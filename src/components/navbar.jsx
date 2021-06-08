@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import './navbar.scss';
 import Avatar from '@material-ui/core/Avatar';
 import AppsIcon from '@material-ui/icons/Apps';
 
-function navbar(props) {
+function Navbar() {
+    const [isOtherAppsListOpen, toggleOtherAppsList] = useState(false)
+    const otherAppsListRef = useRef(null)
+
+    // Added mousedown event listener for otherAppsList
+    useEffect(() => {
+        document.addEventListener('mousedown', otherAppsListRefHandler)
+        return () => {
+            document.removeEventListener('mousedown', otherAppsListRefHandler)
+        }
+    }, []);
+
+    const otherAppsListRefHandler = (event) => {
+        if(!otherAppsListRef.current.contains(event.target)){
+            toggleOtherAppsList(false)
+        }
+    }
+
     return (
         <>
             <div className="navbar">
@@ -17,7 +34,7 @@ function navbar(props) {
                         </div>
                     </div>
                     <div className="navbar-item-container">
-                    <div className="navbar-item">
+                    <div className="navbar-item" ref={otherAppsListRef} onClick={() => { toggleOtherAppsList( !isOtherAppsListOpen ) }}>
                         {/* <a href="#">Apps</a> */}
                         <AppsIcon fontSize="medium"/>
                     </div>
@@ -27,7 +44,7 @@ function navbar(props) {
                 </div>
                 </div>
             </div>
-            {otherGoogleApps()}
+            {isOtherAppsListOpen ? OtherGoogleApps() : null}
         </>
     )
 }
@@ -99,12 +116,12 @@ const otherGoogleAppsInfo = [
     }
 ]
 
-function otherGoogleApps() {
+function OtherGoogleApps() {
     return (
         <div className='other-google-apps-wrapper'>
             <ul className='other-google-apps-list'>
                 {otherGoogleAppsInfo.map((eachApp) => {
-                    return <li className='other-google-apps-list-icon'>
+                    return <li key={eachApp.appName} className='other-google-apps-list-icon'>
                         <div className='other-google-app-info'>
                             <Avatar className="other-google-app-avatar">K</Avatar>
                             <span>{eachApp.appName}</span>
@@ -116,4 +133,4 @@ function otherGoogleApps() {
     )
 }
 
-export default navbar
+export default Navbar
