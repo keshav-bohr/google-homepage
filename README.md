@@ -4,3 +4,7 @@
 - Make the page responsive
 - Create a server to login with google
 - Create redux to store auth info
+
+### CSS topics
+- align items
+- justify content

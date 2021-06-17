@@ -37,6 +37,7 @@ function Navbar() {
                     <div className="navbar-item" ref={otherAppsListRef} onClick={() => { toggleOtherAppsList( !isOtherAppsListOpen ) }}>
                         {/* <a href="#">Apps</a> */}
                         <AppsIcon fontSize="medium"/>
+                        {isOtherAppsListOpen ? OtherGoogleApps() : null}
                     </div>
                     <div className="navbar-item">
                         <Avatar className="navbar-avatar">K</Avatar>
@@ -44,7 +45,6 @@ function Navbar() {
                 </div>
                 </div>
             </div>
-            {isOtherAppsListOpen ? OtherGoogleApps() : null}
         </>
     )
 }
