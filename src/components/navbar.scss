@@ -4,21 +4,20 @@
     flex-direction: row-reverse;
 }
 
-.navbar-item-container-wrapper {
+.svg-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.navbar-item-container {
     padding: 0 15px 0 30px;
     top: 10px;
     display: flex;
     justify-content: center;
     height: 30px;
-}
-
-.navbar-item-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
     align-items: center;
     vertical-align: middle;
-    padding: 0 0 0 5px;
 }
 
 .navbar-item {
