@@ -6,7 +6,6 @@
 
 .svg-container {
     display: flex;
-    height: 100%;
     align-items: center;
 }
 
@@ -39,6 +38,8 @@
 // -----------------------------
 
 .other-google-apps-wrapper {
+    top: 40px;
+    background-color: white;
     position: absolute;
     max-width: 300px;
     right: 0px;
