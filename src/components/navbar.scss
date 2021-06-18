@@ -4,21 +4,19 @@
     flex-direction: row-reverse;
 }
 
-.navbar-item-container-wrapper {
+.svg-container {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item-container {
     padding: 0 15px 0 30px;
     top: 10px;
     display: flex;
     justify-content: center;
     height: 30px;
-}
-
-.navbar-item-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
     align-items: center;
     vertical-align: middle;
-    padding: 0 0 0 5px;
 }
 
 .navbar-item {
@@ -40,6 +38,8 @@
 // -----------------------------
 
 .other-google-apps-wrapper {
+    top: 40px;
+    background-color: white;
     position: absolute;
     max-width: 300px;
     right: 0px;
