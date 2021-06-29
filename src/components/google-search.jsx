@@ -11,7 +11,7 @@ function googleSearch(props) {
                 <img src={googleLogo} alt="google-logo"/>
             </div>
             <form noValidate>
-                <div>
+                <div className="search-bar-wrapper">
                     <SearchOutlinedIcon />
                     <input className='search-input'/>
                     <MicIcon />
