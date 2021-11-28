@@ -31,10 +31,12 @@ function googleSearch(props) {
                     <MicIcon />
                 </div>
                 <div className="search-history-wrapper">
+                    <div className="search-partition"></div>
                     <ul className="search-history-list">
                         {searchHistory.map(() => {
                             return <li className="search-history-item">
                                 <ScheduleIcon fontSize='small'/>
+                                
                             </li>
                         })}
                     </ul>
