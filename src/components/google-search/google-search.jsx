@@ -6,16 +6,16 @@ import ScheduleIcon from '@material-ui/icons/Schedule';
 import './google-search.scss'
 
 const searchHistory = [
-    'history',
-    'history',
-    'history',
-    'history',
-    'history',
-    'history',
-    'history',
-    'history',
-    'history',
-    'history'
+    {title: 'history'},
+    {title: 'history'},
+    {title: 'history'},
+    {title: 'history'},
+    {title: 'history'},
+    {title: 'history'},
+    {title: 'history'},
+    {title: 'history'},
+    {title: 'history'},
+    {title: 'history'}
 ]
 
 function googleSearch(props) {
@@ -33,10 +33,15 @@ function googleSearch(props) {
                 <div className="search-history-wrapper">
                     <div className="search-partition"></div>
                     <ul className="search-history-list">
-                        {searchHistory.map(() => {
+                        {searchHistory.map((singleItem) => {
                             return <li className="search-history-item">
                                 <ScheduleIcon fontSize='small'/>
-                                
+                                <div className='search-history-item-title'>
+                                    <span>{singleItem.title}</span>
+                                </div>
+                                <div className='search-history-item-remove'>
+                                    <div>Remove</div>
+                                </div>
                             </li>
                         })}
                     </ul>

@@ -28,7 +28,7 @@
 
 .search-partition {
     border-top: 1px solid #e8eaed;
-    width: 90%;
+    margin: 0 15px;
 }
 
 .search-form {
@@ -54,14 +54,17 @@
     box-shadow: 0 4px 6px #20212447;
     z-index: 3;
     background-color: white;
-    align-items: center;
 }
 
 .search-history-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     list-style-type: none;
     padding: 0;
 }
 
 .search-history-item {
     display: flex;
+    margin: 0 15px;
 }
