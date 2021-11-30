@@ -48,6 +48,7 @@
     box-shadow: 0 0 4px grey;
     height: #{"calC(100vh - 200px)"}; // it gives error, if not used in strings
     overflow: auto;
+    z-index: 5;
 }
 
 @media screen and (max-height: 500px) {
