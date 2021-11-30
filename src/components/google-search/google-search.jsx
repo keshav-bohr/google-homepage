@@ -1,5 +1,5 @@
 import React from 'react'
-import googleLogo from '../assets/google-logo.png'
+import googleLogo from '../../assets/google-logo.png'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import MicIcon from '@material-ui/icons/Mic';
 import ScheduleIcon from '@material-ui/icons/Schedule';

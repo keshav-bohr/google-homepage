@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./navbar";
-import GoogleSearch from './google-search.jsx'
+import Navbar from "./navbar/navbar";
+import GoogleSearch from './google-search/google-search.jsx'
 
 function homepage(props) {
     return (
