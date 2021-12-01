@@ -44,6 +44,29 @@
     font-size: 16px;
 }
 
+.google-search-buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.google-search-button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+}
+
 .search-history-wrapper {
     position: absolute;
     display: flex;
@@ -78,6 +101,6 @@
     padding: 6px 0;
 }
 
-.search-history-item-title span {
+.search-history-title {
     font-size: 16px;
 }

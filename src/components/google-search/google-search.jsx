@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import googleLogo from '../../assets/google-logo.png'
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import MicIcon from '@material-ui/icons/Mic';
@@ -18,7 +18,9 @@ const searchHistory = [
     {title: 'history'}
 ]
 
-function googleSearch(props) {
+function GoogleSearch(props) {
+    const [searchHistory, setSearchHistory] = useState([])
+    
     return (
         <div className='main-content'>
             <div className='google-logo'>
@@ -30,7 +32,11 @@ function googleSearch(props) {
                     <input className='search-input'/>
                     <MicIcon />
                 </div>
-                <div className="search-history-wrapper">
+                <div className='google-search-buttons-container'>
+                    <div className='google-search-button' type='button'>Google Search</div>
+                    <div className='google-search-button' type='button'>I'm Feeling Lucky</div>
+                </div>
+                {/* <div className="search-history-wrapper">
                     <div className="search-partition"></div>
                     <ul className="search-history-list">
                         {searchHistory.map((singleItem) => {
@@ -38,7 +44,7 @@ function googleSearch(props) {
                                 <ScheduleIcon fontSize='small'/>
                                 <div className='search-history-item-description'>
                                     <div className='search-history-item-title'>
-                                        <span>{singleItem.title}</span>
+                                        <span className='search-history-title'>{singleItem.title}</span>
                                     </div>
                                 </div>
                                 <div className='search-history-item-remove'>
@@ -47,12 +53,12 @@ function googleSearch(props) {
                             </li>
                         })}
                     </ul>
-                </div>
+                </div> */}
             </form>
         </div>
     )
 }
 
 
-export default googleSearch
+export default GoogleSearch
 
