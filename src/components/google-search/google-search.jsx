@@ -36,8 +36,10 @@ function googleSearch(props) {
                         {searchHistory.map((singleItem) => {
                             return <li className="search-history-item">
                                 <ScheduleIcon fontSize='small'/>
-                                <div className='search-history-item-title'>
-                                    <span>{singleItem.title}</span>
+                                <div className='search-history-item-description'>
+                                    <div className='search-history-item-title'>
+                                        <span>{singleItem.title}</span>
+                                    </div>
                                 </div>
                                 <div className='search-history-item-remove'>
                                     <div>Remove</div>
