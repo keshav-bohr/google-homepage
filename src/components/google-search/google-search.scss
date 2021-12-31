@@ -16,11 +16,12 @@
 }
 
 
-.search-bar-wrapper:hover {
+.search-bar-wrapper:hover, .search-bar-wrapper:focus-within {
     box-shadow: 0 1px 6px #c3c3c3;
 }
 
-.search-bar-wrapper:focus-within {
+
+.search-bar-wrapper-with-history {
     border: 1px solid transparent;
     border-radius: 24px 24px 0 0;
     box-shadow: 0 1px 6px #20212447;
@@ -65,6 +66,10 @@
     min-width: 54px;
     text-align: center;
     cursor: pointer;
+}
+
+.google-search-button:hover {
+    border: 1px solid #dadce0;
 }
 
 .search-history-wrapper {
